@@ -48,6 +48,7 @@ pub fn parse(ck3txt: &str) -> Result<JSONValue, Error<Rule>> {
             | Rule::float
             | Rule::date_inner
             | Rule::save_id
+			| Rule::COMMENT
             | Rule::WHITESPACE => {
                 println!("Rule:    {:?}", pair.as_rule());
                 println!("Span:    {:?}", pair.as_span());

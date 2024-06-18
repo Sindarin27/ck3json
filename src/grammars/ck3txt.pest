@@ -1,4 +1,5 @@
 WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
+COMMENT = _{"#" ~ (!"\n" ~ ANY)*}
 
 identifier = @{ tag }
 tag = @{ (ASCII_ALPHANUMERIC | "_" | "-" | "." | ":")+ }
