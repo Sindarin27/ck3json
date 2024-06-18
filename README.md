@@ -18,8 +18,10 @@ ARGS:
     <grammar>     [default: ck3txt]  [possible values: ck3txt, ck3bin]
 ```
 
+<!-- Although our dear upstream repository has a cool Crate and has projects using it, we don't. For the reader's sake, we comment out this part of the readme.
 ## Crate
 [![Crates.io](https://img.shields.io/crates/v/ck3json)](https://crates.io/crates/ck3json)
 
 ## Projects using ck3json
-* [CK3 Family Tree Exporter](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps-Fast-JSON-Version)
+* [CK3 Family Tree Exporter](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps-Fast-JSON-Version) 
+-->
