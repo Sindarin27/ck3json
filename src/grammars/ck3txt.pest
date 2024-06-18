@@ -1,8 +1,9 @@
 WHITESPACE = _{ " " | "\t" | "\r" | "\n" }
 COMMENT = _{"#" ~ (!"\n" ~ ANY)*}
 
-identifier = @{ tag }
+identifier = @{ tag | variable_tag}
 tag = @{ (ASCII_ALPHANUMERIC | "_" | "-" | "." | ":")+ }
+variable_tag = @{"@" ~ tag}
 
 object = {
     "{" ~ "}" |
@@ -17,7 +18,7 @@ array = {
 }
 array_pair = { pair }
 
-value = _{ object | array | rgb | date | string | number | boolean | tag }
+value = _{ object | array | rgb | date | string | number | boolean | variable_tag | tag }
 
 boolean = @{ ("yes" | "no") ~ !ASCII_ALPHA }
 

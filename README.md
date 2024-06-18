@@ -20,7 +20,7 @@ ARGS:
 
 # Known issues
 - Condition pairs (e.g. `primary_title.tier >= tier_kingdom`) are converted to ordinary pairs, and the type of condition is lost.
-- Variables (e.g. `@score = 100`) are not handled and give an error.
+- Condition pairs and variables (e.g. `@score = 100`) may be recognised if invalid or not recognised if valid due to the unavailability of a full syntax description of CK3 files.
 
 <!-- Although our dear upstream repository has a cool Crate and has projects using it, we don't. For the reader's sake, we comment out this part of the readme.
 ## Crate

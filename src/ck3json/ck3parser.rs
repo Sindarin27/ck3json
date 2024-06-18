@@ -34,6 +34,7 @@ pub fn parse(ck3txt: &str) -> Result<JSONValue, Error<Rule>> {
             Rule::string
             | Rule::date => JSONValue::String(pair.into_inner().next().unwrap().as_str()),
             Rule::tag => JSONValue::String(pair.as_str()),
+			Rule::variable_tag => JSONValue::String(pair.as_str()),
             Rule::number => JSONValue::Number(pair.as_str().parse().unwrap()),
             Rule::boolean => JSONValue::Boolean(pair.as_str() == "yes"),
             Rule::file
