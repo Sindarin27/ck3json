@@ -9,7 +9,7 @@ object = {
     "{" ~ pair* ~ "}"
 }
 
-pair = { identifier ~ "=" ~ value }
+pair = { identifier ~ ("=" | ">=" | "<=") ~ value }
 
 array = {
     "{" ~ "}" |
